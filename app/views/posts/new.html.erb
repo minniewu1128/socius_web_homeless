@@ -7,3 +7,9 @@
 
 
 <%= render :partial => "new_form" %>
+
+<!-- The GMaps script that loads the API, once loaded it will call our `initMap` function
+     to begin displaying the map. -->
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzxyyhN78fPrkms-F4AbEUp7YTZ5wDX-s&callback=initMap">
+</script>
