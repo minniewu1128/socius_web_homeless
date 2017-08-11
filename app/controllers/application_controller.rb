@@ -4,13 +4,7 @@ class ApplicationController < ActionController::Base
 
   include ApplicationHelper
 
-  #include SociusWebHomelessHelpers::Gmap
-
-
   protect_from_forgery with: :exception
-
-
-
 
   rescue_from CanCan::AccessDenied do |exception|
     flash[:error] = "You do not have access to this page."
@@ -24,7 +18,6 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
     rescue ActiveRecord::RecordNotFound
   end
-
 
   helper_method :current_user
 
